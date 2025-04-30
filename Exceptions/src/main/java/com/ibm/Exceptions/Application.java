@@ -9,6 +9,13 @@ public class Application {
 			catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println("Run the program supplying a number");
 			}
+			catch (ArithmeticException e) {
+				System.out.println("You cannot divide by zero");
+			}
+			catch (NumberFormatException  e) {
+				System.out.println("Provide valid numbers");
+			}
+
 			System.out.println("End");
 		}
 }
