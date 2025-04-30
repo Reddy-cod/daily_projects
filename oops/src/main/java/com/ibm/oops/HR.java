@@ -8,6 +8,8 @@ public class HR {
     	 }
     	 else if(empType.equalsIgnoreCase("C")) {
     		 return new Confirmed();
+    	 }else if(empType.equalsIgnoreCase("f")) {
+    		 return new Freelance();
     	 }
     	 return null;
     }

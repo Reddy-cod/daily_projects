@@ -5,10 +5,17 @@ public class Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HR hr=new HR();
+		Financial financial=new Financial();
+		
        Employee employee =hr.recruit("i"); //Upcasting
-       employee.salary();
+       if(employee!=null)
+       financial.processSalary(employee);
        employee =hr.recruit("c"); //Upcasting
-       employee.salary();
+       if(employee!=null)
+       financial.processSalary(employee);
+       employee =hr.recruit("f"); //Upcasting
+       if(employee!=null)
+       financial.processSalary(employee);
 	}
 
 }
