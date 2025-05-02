@@ -14,6 +14,8 @@ public class Application {
 			}
 			catch (NumberFormatException  e) {
 				System.out.println("Provide valid numbers");
+			}catch(Exception e) {
+				System.out.println("Unknown error");
 			}
 
 			System.out.println("End");
