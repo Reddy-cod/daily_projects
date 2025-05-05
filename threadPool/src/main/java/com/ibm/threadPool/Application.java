@@ -6,10 +6,8 @@ public class Application {
         // 1. Get available processors (vCPUs)
         int vCPUs = Runtime.getRuntime().availableProcessors();
         System.out.println("Available processors (vCPUs): " + vCPUs);
-
         // 2. Create a fixed thread pool with vCPUs size
         ExecutorService service = Executors.newFixedThreadPool(vCPUs);
-
         // 3. Submit 10 tasks to the thread pool
         for (int counter = 0; counter < 10; counter++) {
             service.execute(new Task(counter));
@@ -19,7 +17,6 @@ public class Application {
             	e.printStackTrace();
             }
         }
-
         // 4. Shutdown the executor (no new tasks will be accepted)
         service.shutdown();
     }
