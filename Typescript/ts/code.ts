@@ -1,14 +1,21 @@
-let numbers: number[] = [1, 3, 4, 4];
-numbers.push(4);
-console.log(numbers);
+let person : [string, number] = ["alice", 34];
+let book: [string, string ,number?];
+book = ["title", "author"];
+book = ["title", "author", 33];
 
-let fruits: Array<string> = ["apple", "bannana"];
-fruits.push("mango");
-console.log(fruits);
 
-const colors: readonly string[] = ["hello", "bye"];
-//colors.push("yellow");
-let mixed: (string | number)[] = ["hello", 42];
-mixed.push(2888);
-mixed.push("typescript");
-console.log(mixed);
+let httpResponse: [number, string, ...string[]] = [
+    200,
+    "ok",
+    "Hi prends",
+    "bye prends"
+];
+
+let point: [x: number, y: number] = [10, 29];
+console.log(point[0]);
+console.log(point[1]);
+
+
+let [pname, num] = person;
+console.log(pname);
+console.log(num);
