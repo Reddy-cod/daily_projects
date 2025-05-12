@@ -1,14 +1,14 @@
-console.info("You are awesome");
-console.log("IBM TECHNOLOGIES");
-console.log({
-    name: "Sam Simon",
-    age: 53
-});
-console.log(["Apple", "Banana", "Orange"]);
-console.error("Something is wrong");
-console.table(["orange", "apple", "grape"]);
-console.assert(2 > 3, "It cannot be ");
-console.clear();
-console.warn("I usually get ignored");
-console.time();
-console.timeEnd();
+let numbers: number[] = [1, 3, 4, 4];
+numbers.push(4);
+console.log(numbers);
+
+let fruits: Array<string> = ["apple", "bannana"];
+fruits.push("mango");
+console.log(fruits);
+
+const colors: readonly string[] = ["hello", "bye"];
+//colors.push("yellow");
+let mixed: (string | number)[] = ["hello", 42];
+mixed.push(2888);
+mixed.push("typescript");
+console.log(mixed);
