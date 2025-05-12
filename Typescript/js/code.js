@@ -1,13 +1,7 @@
-var x = 22;
-{
-    console.log(x);
-    {
-        var x_1 = 33;
-        console.log(x_1);
-    }
-    {
-        var x_2 = 55;
-        console.log(x_2);
-    }
+var userInput = window.prompt("Please enter your Input");
+if (userInput !== null) {
+    window.alert("Hello, ".concat(userInput, "!"));
 }
-console.log(x);
+else {
+    window.alert("You clicked Cancel or closed the prompt.");
+}
