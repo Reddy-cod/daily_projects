@@ -1,0 +1,28 @@
+#headline1 {
+    color:green;
+    text-align: center;
+}
+
+#headline2 {
+    text-align:center;
+}
+h3{
+    color:green;
+}
+.header{
+    color:blueviolet;
+}
+.banner {
+    background-color:aqua;
+}
+* {
+    background-color: azure;
+    font-weight: bold;
+    margin-left:80px;
+    color:rgb(41, 211, 41);
+}
+#div-container,h3{
+    color:white;
+    background-color:blue;
+    font-family: monospace;
+}
