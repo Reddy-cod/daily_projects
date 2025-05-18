@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Compensation History</title></head>
+<body>
+    <h1>Compensation History</h1>
+    <table border="1">
+        <tr><th>Month</th><th>Total Compensation</th></tr>
+        <tr th:each="entry : ${history}">
+            <td th:text="${entry.key}"></td>
+            <td th:text="${entry.value}"></td>
+        </tr>
+    </table>
+    <div th:if="${error}" style="color:red;">[[${error}]]</div>
+    <a th:href="@{/}">Back to Home</a>
+</body>
+</html>
