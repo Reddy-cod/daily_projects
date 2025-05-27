@@ -20,6 +20,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     private DepartmentRepository departmentRepository;
 
     @Override
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
+
+    @Override
     public Employee getEmployeeById(Long id) {
         return employeeRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Employee not found with id: " + id));
@@ -54,4 +59,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.save(existingEmployee);
     }
 
+    @Override
+    public List<Employee> getEmployeesByDepartmentId(Long departmentId) {
+        return employeeRepository.findByDepartmentId(departmentId);
+    }
 }

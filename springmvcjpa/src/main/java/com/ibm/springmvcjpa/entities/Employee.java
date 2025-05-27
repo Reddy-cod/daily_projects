@@ -1,13 +1,6 @@
 package com.ibm.springmvcjpa.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "employee")
@@ -24,16 +17,13 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "departmentid", nullable = false)
     private Department department;
-    
-    public Employee() {
-    	
-    }
-    public Employee(String name) {
-		super();
-		this.name = name;
-	}
 
-	// Getters and Setters
+    public Employee() {}
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
     public long getId() {
         return id;
     }

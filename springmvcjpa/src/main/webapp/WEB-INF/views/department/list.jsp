@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Departments</title>
-    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="<c:url value='/resources/css/style.css' />">
 </head>
 <body>
     <h1>Department List</h1>
@@ -26,7 +26,7 @@
                     |
                     <a href="<c:url value='/departments/delete/${department.id}'/>">Delete</a>
                     |
-                    <a href="<c:url value='/departments/department/${department.id}'/>">View Employees</a>
+                    <a href="<c:url value='/employees/department/${department.id}'/>">View Employees</a>
                 </td>
             </tr>
         </c:forEach>
